@@ -1,0 +1,14 @@
+stuff
+test_yolo
+datasets
+models
+runs
+checkpoints
+
+.ipynb_checkpoints
+.pytest_cache/
+.DS_Store
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
