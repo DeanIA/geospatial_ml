@@ -1,6 +1,4 @@
-stuff
-test_yolo
-datasets
+#datasets
 models
 runs
 checkpoints
@@ -12,3 +10,31 @@ __pycache__/
 *.py[cod]
 *$py.class
 .vscode/
+
+# AIRS
+datasets/AIRS/archive
+datasets/AIRS/images/train
+datasets/AIRS/images/val
+datasets/AIRS/images/test
+datasets/AIRS/labels/train
+datasets/AIRS/labels/val
+datasets/AIRS/labels/test
+
+# DOTAv2
+datasets/DOTAv2/archive
+datasets/DOTAv2/processed
+datasets/DOTAv2/images/train
+datasets/DOTAv2/images/val
+datasets/DOTAv2/images/test
+datasets/DOTAv2/labels/train
+datasets/DOTAv2/labels/val
+datasets/DOTAv2/labels/test
+
+# xView
+datasets/xView/archive
+datasets/xView/images/train
+datasets/xView/images/val
+datasets/xView/images/test
+datasets/xView/labels/train
+datasets/xView/labels/val
+datasets/xView/labels/test
