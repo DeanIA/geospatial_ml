@@ -38,3 +38,8 @@ datasets/xView/images/test
 datasets/xView/labels/train
 datasets/xView/labels/val
 datasets/xView/labels/test
+
+*/yolo11x-obb.pt
+yolo11x-obb.pt
+yolo11n.pt
+yolox

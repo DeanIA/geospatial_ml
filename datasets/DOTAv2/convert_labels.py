@@ -1,12 +1,13 @@
 import sys
 from pathlib import Path
 
-# Your class list in the exact order you want
+# Updated class list in the specified order
 DOTA_CLASSES = [
     "plane", "ship", "storage tank", "baseball diamond", "tennis court",
     "basketball court", "ground track field", "harbor", "bridge",
     "large vehicle", "small vehicle", "helicopter", "roundabout",
-    "soccer ball field", "swimming pool", "container crane"
+    "soccer ball field", "swimming pool", "container crane",
+    "airport", "helipad"
 ]
 CLASS_MAP = {name: idx for idx, name in enumerate(DOTA_CLASSES)}
 
@@ -26,7 +27,7 @@ def convert_labels(input_base: Path, output_base: Path):
                         print(f"[WARN] malformed line in {txt_path}: {line.strip()}", file=sys.stderr)
                         continue
                     coords = parts[:8]
-                    class_name = ' '.join(parts[8:-1])
+                    class_name = ' '.join(parts[8:-1]).replace('-', ' ')
                     diff_flag  = parts[-1]
                     if class_name not in CLASS_MAP:
                         print(f"[WARN] unknown class '{class_name}' in {txt_path}", file=sys.stderr)
@@ -36,7 +37,7 @@ def convert_labels(input_base: Path, output_base: Path):
                     fout.write(' '.join(coords + [str(class_id)]) + '\n')
 
 if __name__ == '__main__':
-    base      = Path('yolo/datasets/DOTAv2/labels')
+    base      = Path('datasets/DOTAv2/labels')
     clean_dir = base.parent / 'labels_clean'
     convert_labels(base, clean_dir)
     print("Done! Clean labels are in:", clean_dir)

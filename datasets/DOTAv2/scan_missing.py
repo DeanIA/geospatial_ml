@@ -2,8 +2,8 @@ import os
 import glob
 
 
-label_folder = "datasets/DOTAv2/labels/train"
-image_folder = "datasets/DOTAv2/images/train"
+label_folder = "datasets/DOTAv2/processed/labels/train"
+image_folder = "datasets/DOTAv2/processed/images/train"
 image_exts = (".png", ".jpg", ".jpeg", ".tif")
 
 # Count label files
@@ -16,8 +16,8 @@ for ext in image_exts:
     image_files.extend(glob.glob(os.path.join(image_folder, f"*{ext}")))
 print(f"Number of image files in train: {len(image_files)}")
 
-label_folder = "datasets/DOTAv2/labels/val"
-image_folder = "datasets/DOTAv2/images/val"
+label_folder = "datasets/DOTAv2/processed/labels/val"
+image_folder = "datasets/DOTAv2/processed/images/val"
 image_exts = (".png", ".jpg", ".jpeg", ".tif")
 
 # Count label files
