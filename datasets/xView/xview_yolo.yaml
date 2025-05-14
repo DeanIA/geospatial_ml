@@ -1,6 +1,7 @@
-train: /kaggle/input/xview-yolo-dataset/YOLO_cfg/train.txt
-val: /kaggle/input/xview-yolo-dataset/YOLO_cfg/val.txt
-test: /kaggle/input/xview-yolo-dataset/YOLO_cfg/test.txt
+path: xView
+train: images/train
+val:   images/val
+device: '1'
 nc: 60
 
 names:
@@ -64,3 +65,4 @@ names:
   57: Shipping Container
   58: Pylon
   59: Tower
+
