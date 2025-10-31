@@ -39,6 +39,8 @@ the RGB-trained model outperformed the multispectral model, achieving **94% vs. 
 
 Next, I started exploring ways to segment satellite imagery and came across a promising approach developed by academic researchers at the **Aerospace Information Research Institute, Chinese Academy of Sciences**, called [SESSRS](https://github.com/qycools/SESSRS/blob/main/README.md).  
 
+[Full Github Repo](https://github.com/DeanIA/SESSRS_refactor)
+
 The problem they were trying to solve was that semantic segmentation models can classify pixels but often blur object edges, while non-semantic models like **SAM** generate sharp boundaries but can’t assign categories.  
 
 Their method runs the same dataset through both types of models.  
