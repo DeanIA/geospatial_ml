@@ -15,19 +15,23 @@ Before fine-tuning on the custom dataset, the current model is trained on a tota
 
 ## Multispectral vs. RGB
 
-Different satellites capture different kinds of imagery.  
-These images often include more than the standard RGB light bands and are therefore called *multispectral*.  
-Intuitively, I expected that using multispectral data instead of RGB would improve classification accuracy.
+Different satellites capture different kinds of imagery. These images often include more than the standard RGB light bands and are therefore called multispectral. Intuitively, I expected that using multispectral data instead of RGB would improve classification accuracy.
 
 To test this, I compared the performance of two models — a **VGG16 CNN** and a **ConvMixer** hybrid CNN/Transformer — on the **EuroSAT** dataset, which is available in both RGB and multispectral versions.  
+
 The VGG16 model was trained on the RGB dataset, and the ConvMixer on the multispectral one.  
+
+[Full GitHub Repository](https://github.com/DeanIA/dl4m_final)
 
 After running a transfer learning loop for both, my intuition proved wrong:  
 the RGB-trained model outperformed the multispectral model, achieving **94% vs. 84% accuracy**.
 
-### VGG16
+![VGG16](image.png)  
+*Figure 1: VGG16 model results*
 
-### ConvMixer
+![Convmixer](image-1.png)
+*Figure 2: Convmixer model results*
+
 
 ---
 
@@ -42,3 +46,9 @@ The semantic model provides labeled masks, and SAM provides precise shapes.
 By comparing the two and merging overlapping regions, they produce sharper masks that still carry class information — **without retraining either model**.  
 
 This taught me a lot, and although it only improved agricultural mask accuracy from **65% to 75%**, it inspired the workflow that eventually worked (mentioned above).
+
+![Sat image](image-2.png)
+*Figure 3: SESSRS Original Sat Image*
+
+![SESSRS Model Prediction](image-3.png)
+*Figure 4: SESSRS Model Prediction*
