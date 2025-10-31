@@ -11,6 +11,10 @@ Before fine-tuning on the custom dataset, the current model is trained on a tota
 - xView  
 - AIRS Buildings  
 
+![image.png](attachment:b7f77aa1-9c4b-4aac-961f-2b444b079e14:image.png)
+
+
+
 ---
 
 ## Multispectral vs. RGB
